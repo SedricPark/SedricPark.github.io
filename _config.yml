@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: /:year/:month/:day/:title.html
+permalink:           pretty
 
 
 # Setup
@@ -9,7 +9,7 @@ title:               Sedric Park blog
 tagline:             
 description:         Blockchain and Research
 url:                 https://sedricpark.github.io
-baseurl:             ""
+baseurl:             ''
 paginate:            10
 
 # About/contact
