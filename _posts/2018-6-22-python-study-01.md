@@ -4,4 +4,9 @@ title: python study 01
 ---
 
 
-> python
+```python
+
+def windows():
+  print "ddd"
+  
+```
