@@ -8,7 +8,7 @@ title:               Sedric Park blog
 tagline:             
 description:         Blockchain and Research
 url:                 https://sedricpark.github.io
-baseurl:             ''
+baseurl:             "sedricpark.github.io"
 paginate:            10
 
 # About/contact
