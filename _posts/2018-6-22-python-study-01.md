@@ -1,6 +1,7 @@
 ---
 layout: post
 title: python study 01
+permalink: /mypageurl/
 ---
 
 
