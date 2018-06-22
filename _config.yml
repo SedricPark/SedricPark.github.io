@@ -9,7 +9,7 @@ tagline:
 description:         Blockchain and Research
 url:                 https://SedricPark.github.io
 baseurl:             ''
-paginate:            5
+paginate:            10
 
 # About/contact
 author:
