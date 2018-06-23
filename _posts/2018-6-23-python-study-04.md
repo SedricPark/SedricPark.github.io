@@ -2,7 +2,7 @@
 
 ## 조건문, if
 
-```python
+```
 if 조건:
 	위 조건에 부합될 때 실행 할 코드 블록
 elif 두번째 조건:
@@ -15,7 +15,7 @@ else:
 
 ## 반복문, for
 
-```python
+```
 for 변수 in 리스트:
 	매 항목마다 수행할 코드 블록
 ```
@@ -31,7 +31,7 @@ for i in range(20):
 
 ### 반복문 중첩
 
-```python
+```
 for i in range(2, 10):
 	for j in range(1, 10):
     	print(i, j)
@@ -56,7 +56,7 @@ def gugu():
 
 ## 반복문 while
 
-```python
+```
 while 조건:
 	매 항목마다 수행할 코드 블록
 ```
