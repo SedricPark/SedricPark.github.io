@@ -1,7 +1,6 @@
 ---
 layout: post
 title: python study 08
-categories: python
 ---
 
 
