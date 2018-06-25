@@ -43,6 +43,3 @@ calc2.__call__(1, 2)
 calc2(1, 2)						# 함수처럼 사용 가능
 ```
 
-## 순회 가능한 객체
-
-![2017-01-25-iter-vs-gen-relationships](/Users/maclion/Desktop/2017-01-25-iter-vs-gen-relationships.png)
