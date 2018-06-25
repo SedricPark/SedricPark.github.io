@@ -1,8 +1,8 @@
------
-layout : post
-title : 2018 6 25 python study 08
-categories : python
------
+---
+layout: post
+title: 2018 6 25 python study 08
+categories: python
+---
 
 
 ## 호출가능한 객체
