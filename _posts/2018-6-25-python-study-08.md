@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2018 6 25 python study 08
+title: python study 08
 categories: python
 ---
 
