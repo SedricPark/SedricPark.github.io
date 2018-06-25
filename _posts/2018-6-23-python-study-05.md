@@ -1,3 +1,8 @@
+---
+categories: python
+---
+
+
 # python 흐름제어
 
 ## 조건문, if
