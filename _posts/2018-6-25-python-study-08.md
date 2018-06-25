@@ -1,3 +1,7 @@
+---
+categories: python
+---
+
 
 ## 호출가능한 객체
 
