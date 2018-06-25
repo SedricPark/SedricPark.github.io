@@ -1,8 +1,3 @@
----
-layout: post
-title: python study 08
----
-
 
 ## 호출가능한 객체
 
