@@ -1,3 +1,8 @@
+---
+categories: python
+---
+
+
 # 파이썬 함수
 
 
