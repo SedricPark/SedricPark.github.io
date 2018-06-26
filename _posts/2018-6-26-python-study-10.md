@@ -20,7 +20,7 @@ categories: python
 def mysum(x, y):
     x += 1
     y += 1
-    return x + y       # 함수 진입점이 하나, 호출 후에는 종료되며 초기화 된다
+    return x + y # 함수 진입점이 하나, 호출 후에는 종료되며 초기화 된다
 
 # 코루틴
 def to_3(base):
@@ -32,7 +32,7 @@ def to_3(base):
     yield base + 2
     i += 1
     yield base + 3
-    yield i				# 함수 실행이 종료되지 않고 핑퐁식으로 호출시 마다 계속 유지
+    yield i	 # 함수 실행이 종료되지 않고 핑퐁식으로 호출시 마다 계속 유지
 ```
 
 ### generators(제너레이터)
@@ -48,14 +48,14 @@ def to_3(base):
 ```python
 def muxrange(start, end):
     while stat < end:
-        yield start			# 함수 generator 문법
+        yield start	# 함수 generator 문법
         start += 1
 ```
 
 ### 중첩된 generator
 
 ```python
-gen1 = (i**2 for i in range(10))	# gen1에서 0이 생성되자 마자
+gen1 = (i**2 for i in range(10))# gen1에서 0이 생성되자 마자
 gen2 = (j+10 for j in gen1)			# gen2로 전달 되고
 gen3 = (k*10 for k in gen2)			# gen3로 전달 된다
 
@@ -63,7 +63,7 @@ for i in gen3:		# 첫 번째 값을 받아올 때, 그제서야 gen1에서 값�
     print(i, end=' ')
     
 # 제너레이터를 튜플이나 리스트로 변환하지 말자
-t1 = tuple(i**2 for i in range(10))	# 모든 값이 튜플로 생성 된다
+t1 = tuple(i**2 for i in range(10)) # 모든 값이 튜플로 생성 된다
 t2 = tuple(j+10 for j in t1)		# 위와 동일하게 생성
 t3 = tuple(k*10 for k in t2)		# 위와 동일하게 생성
 
