@@ -62,7 +62,7 @@ gen3 = (k*10 for k in gen2)			# gen3로 전달 된다
 for i in gen3:		# 첫 번째 값을 받아올 때, 그제서야 gen1에서 값을 생산 시작
     print(i, end=' ')
     
-# 제너레이터를 튜플이나 리스트로 변화하지 말자
+# 제너레이터를 튜플이나 리스트로 변환하지 말자
 t1 = tuple(i**2 for i in range(10))	# 모든 값이 튜플로 생성 된다
 t2 = tuple(j+10 for j in t1)		# 위와 동일하게 생성
 t3 = tuple(k*10 for k in t2)		# 위와 동일하게 생성
