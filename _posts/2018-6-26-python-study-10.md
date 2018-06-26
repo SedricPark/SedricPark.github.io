@@ -126,7 +126,7 @@ tuple(islice(fib(), 10))
 * 순회가능한 객체를 조작하여, 필터링/새로운 리스트/사전/집합을 만들 수 있는 방법
 * tuple comprehension은 없음. 필요하다면 만들어 줘야 함
 
-```python
+```
 # list comprehension
 [표현식 for 변수 in 순회가능한객체 if 필터링 조건]
 [i ** 2 for i in range(10) if i % 2 == 0]
