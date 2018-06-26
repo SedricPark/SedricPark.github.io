@@ -64,8 +64,8 @@ for i in gen3:		# 첫 번째 값을 받아올 때, 그제서야 gen1에서 값�
     
 # 제너레이터를 튜플이나 리스트로 변환하지 말자
 t1 = tuple(i**2 for i in range(10)) # 모든 값이 튜플로 생성 된다
-t2 = tuple(j+10 for j in t1)		# 위와 동일하게 생성
-t3 = tuple(k*10 for k in t2)		# 위와 동일하게 생성
+t2 = tuple(j+10 for j in t1)		    # 위와 동일하게 생성
+t3 = tuple(k*10 for k in t2)		    # 위와 동일하게 생성
 
 for i in t3:		# 이미 생성된 튜플 값에 대해서 순회를 하게 됨
     print(i, end=' ')
