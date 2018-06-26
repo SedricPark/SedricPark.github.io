@@ -122,7 +122,7 @@ class Dog():
 
 ```python
 class Person:
-    def __init(self, name):
+    def __init__(self, name):
         self.__name = name
         
     def say_hello(self):
