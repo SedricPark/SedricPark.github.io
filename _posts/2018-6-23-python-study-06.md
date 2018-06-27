@@ -71,6 +71,8 @@ def fn2(*colors):
 
 ## Unpacking
 
+* 인자를 넘길 때 시퀀스데이터 타입을 다수의 인자인 것처럼 나눠서 전달 가능
+
 ```python
 colors = ['white', 'yellow', 'black']
 fn2(*colors)
