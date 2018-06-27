@@ -3,7 +3,7 @@ categories: python
 ---
 
 
-## 모듈, 팩키지
+## 모듈, 패키지
 
 ### import
 
