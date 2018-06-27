@@ -102,3 +102,22 @@ mylist.sort(key=lambda i: i%3, reverse=True)
 * 한 문자끼리 비교는 각 문자에 매핑된 문자코드를 따라 비교
 * 문자열끼리의 비교는 첫번째 인덱스부터 대소비교가 판가름 날 때까지 비교
 * list/tuple 끼리의 비교도 문자열 비교와 동일
+
+```python
+# 1차 기준 : 자릿수 (11은 2, 123은 3, 1111은 4)
+# 2차 기준 : 1의 자리 숫자 (11은 1, 123은 3)
+
+def sort_fn(value):
+  pass # 함수 구현
+
+mylist = [10, 11, 9, 20, 12, 313, 211, 121]
+mylist.sort(key= sort_fn)
+print(mylist) # [9, 10, 20, 11. 12. 211. 121, 313]
+```
+
+```python
+def sort_fn(value):
+  list1 = len(str(value))
+  list2 = value % 10
+  return list1, list2
+```
