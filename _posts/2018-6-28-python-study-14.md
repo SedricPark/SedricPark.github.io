@@ -1,3 +1,7 @@
+---
+categories: python
+---
+
 ## 파일에 저장하고 읽어오기
 
 ### 파일모드
@@ -99,7 +103,7 @@ f.close()
 f = open('sample.txt', 'wt', encoding='utf8')
 try:
     f.write('hello')
-    1/0
+    1/0 # 에러 발생
 finally:
     f.close()
     print('file closed.')
