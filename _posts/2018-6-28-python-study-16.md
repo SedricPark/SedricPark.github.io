@@ -24,5 +24,28 @@ class Doctor(Person):
   * `Class.mro` 확인 가능
   * MRO가 꼬이면 클래스 상속을 받을 수 없음
 
+### 부모 함수의 호출
 
+* 내장함수 `super()` 를 통해 부모의 함수 호출
+* 호출시에는 MRO에 기반하여 호출
+
+```python
+class A:
+    def fn(self):
+        print("A-fn")
+        
+class B(A):
+    def fn(self):
+        super().fn()
+        print("B-fn")
+        
+class C(A):
+    def fn(self):
+        super().fn()
+        print("C-fn")
+        
+class D(A):
+    super().fn()
+    print("D-fn")
+```
 
