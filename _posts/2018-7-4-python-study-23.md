@@ -2,9 +2,7 @@
 categories: crawling
 ---
 
-
-
-## 웹크롤링4
+## 웹크롤링 시작하기 4
 
 #### 단순 HTML 크롤링
 

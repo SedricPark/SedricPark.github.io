@@ -2,8 +2,6 @@
 categories: crawling
 ---
 
-
-
 ## 웹크롤링 시작하기2
 
 ### DOM 문서

@@ -2,11 +2,9 @@
 categories: crawling
 ---
 
-
-
 ## 웹크롤링 시작하기1
 
-### HTML 크롤링 하기
+###HTML 크롤링 하기
 
 #### 헤더란?
 
