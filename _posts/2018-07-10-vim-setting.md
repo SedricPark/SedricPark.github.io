@@ -242,3 +242,53 @@ set softtabstop=4
 set shiftwidth=4
 filetype indent on
 ```
+
+### Oh My Zsh 테마 설정
+
+* oh my zsh은 커맨드 라인의 색이나 기타를 변경하는 테마
+* 기본적으로 `~/.oh-my-zsh/themes` 에 있는 테마를 `~/.zshrc`에 등록해주면 된다
+
+```python
+# ~/.zshrc
+ZSH_THEME="테마이름"  # ~/.oh-my-zsh/themes에 있는 테마 이름 작성
+```
+
+* darcula 테마는 없기 때문에 홈페이지에서 다운로드 받고 설정
+  * https://draculatheme.com/zsh/
+
+### Oh My Zsh 플러그인
+
+* syntax-highlighting and autosuggestions 설치
+  * 참고 : http://www.ivaylopavlov.com/setting-oh-zsh-zsh/
+* autosuggestions는 경로나 명령어 자동추천
+
+```python
+#git clone으로  하는 방법
+# autosuggestions 설치하기
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    
+# ~/.zshrc 아래 내용 작성하고 적용시키기
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zshrc
+# 터미널 재시작
+
+#oh-my-zsh 이용은 아래 사이트 참고
+https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+    
+# 삭제 방법 
+rm -rf ~/.zsh/zsh-autosuggestions
+```
+
+* syntax-highlighting는 명령어 강조
+
+```python
+# 설치 가이드
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+    
+# git clone으로 설치
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+
+# ~/.zshrc 에 아래내용 추가
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
