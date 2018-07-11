@@ -21,23 +21,23 @@ categories: javascript
 * 다양한 연산 하기(콘솔에서 작업)
 
 ```javascript
-Math.pow(3, 2); # 3의 2승 결과를 돌려줌
+Math.pow(3, 2); // 3의 2승 결과를 돌려줌
 > 9 
 
-Math.round(10.6); # 반 올림 명령어
+Math.round(10.6); // 반 올림 명령어
 > 11
 
-Math.ceil(10.2); # 올림 명령어
+Math.ceil(10.2); // 올림 명령어
 > 11
 
-Math.floor(10.2); # 버림 명령어
+Math.floor(10.2); // 버림 명령어
 > 10
 
-Math.sqrt(9); # 9의 제곱근
+Math.sqrt(9); // 9의 제곱근
 > 3
 
-Math.random(); # 1보다 적은 난수 생성 
-100 * Math.random(); # 100보다 작은 난수 생성 
+Math.random(); // 1보다 적은 난수 생성 
+100 * Math.random(); // 100보다 작은 난수 생성 
 
 Math.round(100 * Math.random());
 ```
