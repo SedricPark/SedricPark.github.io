@@ -169,7 +169,7 @@ Plugin 'Syntastic'
 
 # 파일 찾기, 검색시 인덱스로 오류도 자주나고 렉도 걸림 비추
 # 검색 인덱스 제외 세팅해주어야 함
-Plugin 'ctrlp.vim'
+Plugin 'ctrlp.vim' # 문제가 있음
 # 검색 인덱스 제외 세팅
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
@@ -207,7 +207,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Syntastic'
-Plugin 'ctrlp.vim'
+"Plugin 'ctrlp.vim' # 문제가 있어서 사용 안함 
 Plugin 'KeitaNakamura/neodark.vim'
 
 filetype plugin indent on
@@ -217,7 +217,7 @@ map <Leader>q :bp<CR>
 map <Leader>w :bn<CR>
 map <Leader>t <ESC>:NERDTree<CR>
 
-let g:airline_theme='simple'
+let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
@@ -225,16 +225,16 @@ let g:airline_powerline_fonts = 1
 
 # https://github.com/KeitaNakamura/neodark.vim
 colorscheme neodark
-let g:neodark#background = '#202020'
+set termguicolors
+"let g:neodark#background = '#202020' # 배경 비활성화 함
 
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
-  \ 'file': '\v\.(exe|so|dll)$'
-\ }
+# 문제가 있어서 비활성 화
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
+"  \ 'file': '\v\.(exe|so|dll)$'
+"\ }
 
 syntax on
-set termguicolors
 set number
 set tabstop=8
 set expandtab
