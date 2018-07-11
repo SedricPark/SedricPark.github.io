@@ -1,8 +1,8 @@
 ---
-categories: python
+categories: crawling
 ---
 
-## 웹크롤링 시작하기 4
+## 웹크롤링 시작하기 5
 
 * 네이버 실시간 검색어 크롤링하기
 
