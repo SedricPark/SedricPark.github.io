@@ -1,5 +1,5 @@
 ---
-categoires: javascript
+categories: javascript
 ---
 
 ### Javacript 배열
