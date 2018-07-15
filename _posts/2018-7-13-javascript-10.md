@@ -1,5 +1,5 @@
 ---
-categories: javacript
+categories: javascript
 ---
 
 ### Javascript 모듈
