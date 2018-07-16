@@ -8,7 +8,7 @@ categories: javascript
 
 * 전역변수와 지역변수
 
-```javascript {
+```javascript
 // 전역변수
 let vscope = 'global'; 			// 전역변수
 function fscope () {
@@ -22,6 +22,7 @@ function fscope () {
     let myvar = 'myvar'			// 지역변수
     alert(vscope);
 }
+
 > alert(myvar); 				// 지역변수는 호출이 안됨
 ```
 
