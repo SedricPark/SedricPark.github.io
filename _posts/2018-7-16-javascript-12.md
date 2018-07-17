@@ -294,3 +294,68 @@ for (var index in arr) {
 }
 ```
 
+---
+
+
+
+### Arguments
+
+* 매개변수 : 함수를 생성 할 때 받을 변수
+* 인자 : 함수를 호출 할 때, 매개변수로 넘겨줄 요소
+* 자바스크립트는 관대한 언어
+
+```javascript
+// arguments는 받은 인자를 알려주는 내부함수
+// 함수를 만들 때 매개변수를 지정하지 않아도, 함수를 호출 할 때 인자를 넣어도 되는 관대함
+// 인자의 갯수도 상관 없음
+function sum () {
+    let _sum = 0;
+    for (let i = 0; i < arguments.legth; i++) {
+        document.write(i + ' : ' + arguments[i] + '<br/>');
+        _sum += arguments[i]
+    }
+    return _sum;
+}
+
+document.write('result : ' + sum(1, 2, 3, 4));
+```
+
+* 매개변수 수와 인자의 수
+
+```javascript
+// 자바는 매개변수와 주어지는 인자의 차이를 변별하기 위해 다음을 이용 한다
+// 매개변수의 갯수와 인자의 갯수를 비교, 같은 경우에는 진행, 다른 경우 에러 발생 시키는방법
+function zero(arg) {
+    console.log (
+    'zero.length', zero.length,		// zero 함수의 매개 변수 갯수
+    'arguments', arguments.length	// zero 함수 호출시의 인자 갯수
+    )
+}
+zero('a', 'b')
+```
+
+---
+
+
+
+#### 함수의 호출
+
+```javascript
+// this는 myobject1을 의미하고
+// apply 함수는 function.apply([thisObj[,argArray]]) 형태다
+// 즉, apply(객체)로 객체를 인자로 넘겨 주면, 객체에 해당하는 this를 사용 가능 하다 
+
+myobject1 = {'a': 1, 'b': 2, 'c': 3};
+myobject2 = {'d': 4, 'e': 5, 'f': 6};
+
+function sum() {
+    let _sum = 0;
+    for (name in this) {
+        _sum += this(name)
+    }
+    return _sum;
+}
+
+alert(sum.apply(myobject1)) // 6
+alert(sum.apply(myobject2)) // 15
+```
