@@ -91,7 +91,7 @@ func();
 
 > window === this
 
-// 매소드를 할 경우
+// 매소드로 호출 할 경우
 // 매소드로 특별히 지정 할 경우에는 객체 그 자신이 this가 된다
 let myobject = {
     func : function () {

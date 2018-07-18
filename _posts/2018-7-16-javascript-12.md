@@ -33,7 +33,8 @@ let vscope = 'global';
 function fscope () {
     vscope = 'local'	// let를 빼버리면 vscope 변수에 local이 할당되고
 }
-> alert(myvar);			// 호출 했을 때, vscope에 할당된 'local'이 호출 되는 것
+> fscope();
+> alert(vscope);		// 호출 했을 때, vscope에 할당된 'local'이 호출 되는 것
 ```
 
 * 잘못된 유효범위에 따른 문제점
@@ -91,10 +92,8 @@ function b () {
     document.write(i);
 }
 
-a(); 	// 5의 결과값은 5이다. 이유는 함수가 선언된 시점에서의 유효범으를 가지기 때문
+a(); 	// 5의 결과값은 5이다. 이유는 함수가 선언된 시점에서의 유효범위를 가지기 때문
 ```
-
-
 
 ---
 
@@ -172,6 +171,16 @@ let numbers = [20, 10, 22, 11, 6, 2, 8, 30];
 
 alert(numbers.sort(sortNumber)); 
 > [30,22,20,11,10,8,6,2]
+
+// 콜백 다른 예제
+let loading = function(path, done) {
+    console.log('전달받은 경로: ', path)
+    done(path + 'sample.txt')
+}
+
+loading('/folder/', function(result) {
+    console.log('완료 :', result)
+})
 ```
 
 * 비동기처리
@@ -192,8 +201,6 @@ $.get('./data.json.js', function(result) {
 ```
 
 ---
-
-
 
 #### 클로저
 
@@ -296,8 +303,6 @@ for (var index in arr) {
 
 ---
 
-
-
 ### Arguments
 
 * 매개변수 : 함수를 생성 할 때 받을 변수
@@ -335,8 +340,6 @@ zero('a', 'b')
 ```
 
 ---
-
-
 
 #### 함수의 호출
 
