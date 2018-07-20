@@ -348,9 +348,9 @@ console.log(a.id)
 //객체이지만 복제처럼 되는 경우
 let a = {'id': 1};
 let b = a;
-b.id = {'id': 2} // 새로운 객체 생성하여 할당 
-console.log(a.id)
-> 1
+b.id = {'id': 2} // a.id.id : 2	인 새로운 객체 생성 
+console.log(a.id.id)
+> 2
 ```
 
 * 참조와 복제 그리고 함수
