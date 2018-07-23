@@ -11,7 +11,7 @@ categories: javascript
 #### 생성자와 new 1
 
 ```javascript
-// 가장 기본적인 객체 생성과 호출이자만 중간에 다른 코드가 끼어들 수 있는 문제점이 있음
+// 가장 기본적인 객체 생성과 호출이지만 중간에 다른 코드가 끼어들 수 있는 문제점이 있음
 let person = {}
 person.name = 'sedric';
 person.introduce = function () {
@@ -273,7 +273,7 @@ console.log('a.toString()', a.toString());
 Object.prototype.contain = function(neddle) {
     for(let name in this) {
         if(this[name] === neddle) {
-            return ture;
+            return true;
         }
     }
     return false;
@@ -284,7 +284,7 @@ console.log(o.contain('sedric'));
 
 // Object 확장의 위험성
 for(let name in o) {
-    console.log(name);
+    console.log(o[name]);
 }
 > name
 > contain // 객체를 돌려줌
@@ -383,6 +383,3 @@ func(a);
 console.log(a.id);
 > 2
 ```
-
-
-
