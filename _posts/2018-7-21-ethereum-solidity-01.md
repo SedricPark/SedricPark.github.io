@@ -2,29 +2,53 @@
 categories: ethereum/solidity
 ---
 
-# 블록체인 애플리케이션 개발 실전 입문
+## 블록체인 애플리케이션 개발 실전 입문
 
 ## 개발환경 세팅
 
 * 맥에서 도커를 이용해서 우분투 16.04 LTS 버전 사용
 * 우분투 16.04 LTS는 기존에 기본 세팅이 끝난 이미지를 사용(권한은 root)
 * 처음 컨테이너 실행시 JSON-RPC 포트를 사전에 매핑을 해야 함
-  * `run -i -t -p 8545:8545 --name solidity ubuntu_pyenv:0.1 /usr/bin/zsh`
+  * ```zsh
+    docker run -i -t -p 8545:8545 --name solidity ubuntu_pyenv:0.1 /usr/bin/zsh
+    ```
 
 ### Geth 설치
 
-* geth(go-ethereum), 설치버전은 1.5.5
+* golang과 geth(go-ethereum), 설치버전
 
 ```zsh
-# golang으로 만들어진 클리언트, 소스코드로부터 빌드해야 하므로 go 언어와 C 컴파일러 설치
+# geth는 golang으로 만들어진 클리언트, golang부터 먼저 설치
 apt-get install -y build-essential libgmp3-dev golang git tree
+
+# apt-get 최신화
+apt-get update
+apt-get upgrade
+
+# golang 1.10.3 최신버전 설치. apt-get은 레포짓이 최신화가 안되어 있음
+wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+
+# 압축 풀기
+sudo tar -xvf go1.10.3.linux-amd64.tar.gz
+
+# 폴더 이동
+sudo mv go /usr/local
+
+# golang의 zsh 환경 변수 설정
+export GOPATH=$HOME/go
+export GOPATH=$HOME/home/wikibooks
+export PATH=$PATH:/usr/local/go/bin
+source ~/.zshrc
+
+# go version 확인
+go version
 
 # geth git에서 다운로드
 git clone https://github.com/ethereum/go-ethereum.git
 
-# geth 1.5.5 버전 체크
+# geth 1.8.12 stable 변경
 cd go-ethereum
-git checkout refs/tags/v1.5.5
+git checkout refs/tags/v1.8.12
 
 # geth 빌드
 make geth
@@ -36,23 +60,21 @@ build/bin/geth
 build/bin/geth version
 
 Geth
-Version: 1.5.5-stable
-Git Commit: ff07d54843ea7ed9997c420d216b4c007f9c80c3
+Version: 1.8.12-stable
+Architecture: amd64
 Protocol Versions: [63 62]
 Network Id: 1
-Go Version: go1.6.2
-OS: linux
-GOPATH=
-GOROOT=/usr/lib/go-1.6
+Go Version: go1.10.3
+Operating System: linux
+GOPATH=/root/home/wikibooks
+GOROOT=/usr/local/go
 
 # geth를 /usr/local/bin에 복사
 cp build/bin/geth /usr/local/bin
 
 # 복사가 제대로 되었는지 확인
 which geth
-
 > /usr/local/bin/geth
-
 ```
 
 ---
@@ -78,21 +100,20 @@ pwd
 	"nonce": "0x0000000000000042",
 	"timestamp": "0x0",
 	"parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-	"extraData": "0x0",
+	"extraData": "0x00",
 	"gasLimit": "0x8000000",
 	"difficulty": "0x4000",
 	"mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
 	"coinbase": "0x3333333333333333333333333333333333333333",
-	"alloc": {}
+	"alloc": {},
+	"config": {}
 }
 
 # geth 초기화
 geth --datadir /home/wikibooks/data_testnet init /home/wikibooks/data_testnet/genesis.json
 
-# tree 구조 확인
+# tree 구조 확인, tree가 없는 경우 apt-get install tree로 설치
 tree data_testnet
-
-geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/wikibooks/data_testnet console 2>> /home/wikibooks/data_testnet/geth.log
 ```
 
 * 초기화 완료 후 Geth 실행
@@ -161,7 +182,7 @@ geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/wikibooks/data_t
 eth.coinbase
 
 # etherbase 계정 변경
-miner.setEtherbase(eth.account[1])
+miner.setEtherbase(eth.accounts[0])
 
 # 잔고 확인, getBalance 인수로는 계정의 주소를 전달해야 함
 eth.getBalance(eth.accounts[0])
@@ -326,7 +347,7 @@ eth.getBalance(eth.accounts[0]) # 소수점 이상의 잔액이 추가로 남아
 * 실행 명령어
 
 ```zsh
-nohup geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/wikibooks/data_testnet --mine --minerthreads 1 --rpc 2>> /home/wikibooks/data_testnet/geth.log &
+ps
 
 # nohup : 유닉스 계열 os 명령어, 로그아웃 후에도 프로세스가 종료되지 않음, 중지는 kill
 # --mine : 채굴을 활성화
@@ -392,4 +413,3 @@ geth --networkid 4649 --nodiscover --maxpeers 0 --datadir /home/wikibooks/data_t
 # --unlock 0 : 잠금 해제할 계정 지정
 # --verbosity 6 : 로그 출력 수준을 지정(0=silent, 1=error, 2=warn, 3=info, 4=core, 5=debug, 6=detail, 기본값은 3)
 ```
-
