@@ -1,10 +1,10 @@
 ---
-categories: ethereum/soildity
+categories: ethereum/solidity
 ---
 
 ## 토큰 크라우드 세일
 
-### 계약 개요
+### 계약 개요 
 
 * 토큰을 기간과 목표 금액을 설정하고, 크라우드 펀드 형식으로 판매
 * 기간 내 목표 금액을 달성하면 자금 제공자는 토큰을, 크라우드 세일 실시자는 이더 획득
